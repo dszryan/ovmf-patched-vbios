@@ -1,0 +1,30 @@
+pkgbase = edk2-ovmf-vbios-1050-ti-max-q-10de-1c8c
+	pkgdesc = Tianocore UEFI firmware for qemu with vbios patched in.
+	pkgver = edk2.stable201905
+	pkgrel = 1
+	url = http://sourceforge.net/apps/mediawiki/tianocore/index.php?title=EDK2
+	arch = x86_64
+	license = custom
+	makedepends = git
+	makedepends = gcc5
+	makedepends = python2
+	makedepends = iasl
+	makedepends = nasm
+	makedepends = subversion
+	makedepends = perl-libwww
+	makedepends = vim
+	makedepends = dos2unix
+	source = edk2::git+https://github.com/tianocore/edk2#commit=${pkgver/\./-}
+	source = file://$startdir/vBIOS.bin
+	source = file://$startdir/70-edk2-ovmf-patched-x86_64.json
+	source = file://$startdir/IntelIGD.patch
+	source = file://$startdir/QemuFwCfgAcpi.c.patch
+	source = file://$startdir/ssdt.asl
+	sha512sums = SKIP
+	sha512sums = SKIP
+	sha512sums = d289eb3ccda1e431d59622956b87dfb2c9d384140946dba643d8e95d0030385e
+	sha512sums = 59954884e0f565a4569cfd58995a748ddefe48f1b6b2f42928cd8db506699d2a
+	sha512sums = a1717291ade527ddc7221c9448c15fe187b30e5fe831a2570d5ead851e57dd03
+	sha512sums = 10a8758c07a675134ea1a66eed26513ec38991832a7087ee3724a6a6ebee7c4b
+	validpgpkeys = 8657ABB260F056B1E5190839D9C4D26D0E604491
+pkgname = edk2-ovmf-vbios-1050-ti-max-q-10de-1c8c
